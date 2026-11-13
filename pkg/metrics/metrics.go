@@ -85,7 +85,7 @@ var (
 )
 
 func init() {
-	prometheus.MustRegister(MachineCollectorUp)
+	metrics.Registry.MustRegister(MachineCollectorUp)
 	metrics.Registry.MustRegister(MachinePhaseTransitionSeconds, VsphereRequestDurationSeconds)
 	metrics.Registry.MustRegister(
 		failedInstanceCreateCount,
